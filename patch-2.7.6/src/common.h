@@ -116,6 +116,7 @@ XTERN int patch_get;
 XTERN bool set_time;
 XTERN bool set_utc;
 XTERN bool follow_symlinks;
+XTERN bool omnibor_flag;
 
 enum diff
   {

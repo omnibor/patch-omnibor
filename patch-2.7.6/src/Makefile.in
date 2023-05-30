@@ -207,11 +207,11 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__patch_SOURCES_DIST = bestmatch.h common.h inp.c inp.h patch.c \
 	pch.c pch.h safe.c safe.h util.c util.h version.c version.h \
-	list.h merge.c
+	list.h ansidecl.h sha1.c sha1.h sha256.c sha256.h merge.c
 @ENABLE_MERGE_TRUE@am__objects_1 = merge.$(OBJEXT)
 am_patch_OBJECTS = inp.$(OBJEXT) patch.$(OBJEXT) pch.$(OBJEXT) \
-	safe.$(OBJEXT) util.$(OBJEXT) version.$(OBJEXT) \
-	$(am__objects_1)
+	safe.$(OBJEXT) util.$(OBJEXT) version.$(OBJEXT) sha1.$(OBJEXT) \
+	sha256.$(OBJEXT) $(am__objects_1)
 patch_OBJECTS = $(am_patch_OBJECTS)
 am__DEPENDENCIES_1 =
 patch_DEPENDENCIES = $(top_builddir)/lib/libpatch.a \
@@ -1143,7 +1143,7 @@ top_srcdir = @top_srcdir@
 AM_CFLAGS = $(WARN_CFLAGS) $(WERROR_CFLAGS)
 patch_SOURCES = bestmatch.h common.h inp.c inp.h patch.c pch.c pch.h \
 	safe.c safe.h util.c util.h version.c version.h list.h \
-	$(am__append_1)
+	ansidecl.h sha1.c sha1.h sha256.c sha256.h $(am__append_1)
 AM_CPPFLAGS = -I$(top_builddir)/lib -I$(top_srcdir)/lib \
 	$(am__append_2)
 patch_LDADD = $(LDADD) $(top_builddir)/lib/libpatch.a $(LIB_CLOCK_GETTIME) \
@@ -1240,6 +1240,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/patch.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pch.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/safe.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sha1.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sha256.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/util.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/version.Po@am__quote@
 

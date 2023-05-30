@@ -33,7 +33,12 @@ patch_SOURCES = \
 	util.h \
 	version.c \
 	version.h \
-	list.h
+	list.h \
+	ansidecl.h \
+	sha1.c \
+	sha1.h \
+	sha256.c \
+	sha256.h
 
 AM_CPPFLAGS = -I$(top_builddir)/lib -I$(top_srcdir)/lib
 patch_LDADD = $(LDADD) $(top_builddir)/lib/libpatch.a $(LIB_CLOCK_GETTIME) \
